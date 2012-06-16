@@ -22,6 +22,7 @@ syn region literal start="\"" end="\""
 syn region innerLiteral start="'" end="'" contained
 syn region innerLiteral start="\"" end="\"" contained
 syn region comment start="/[*]" end="[*]/"
+syn region comment start="//" end="\n"
 
 syn region jsBlock start="{" end="}"
 
