@@ -8,6 +8,8 @@ if exists("b:current_syntax")
     finish
 endif
 
+syn include @js syntax/javascript.vim
+
 syn match pegOperator "[/.+*?&!]"
 syn region charSet start="\[" end="\]"
 syn match rule "[a-zA-Z$_][a-zA-Z$_0-9]*"
@@ -24,7 +26,7 @@ syn region innerLiteral start="\"" end="\"" contained
 syn region comment start="/[*]" end="[*]/"
 syn region comment start="//" end="\n"
 
-syn region jsBlock start="{" end="}" contains=jsBlock
+syn region jsBlock start="{" end="}" keepend contains=@js
 
 hi def link ruleDef         PreProc
 hi def link rule            Type
