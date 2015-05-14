@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language: PEG JS Grammars
+" Language: PEG JS Grammars for CoffeeScript
 " Maintainer: Andrew Lunny <alunny@gmail.com>
 " Latest Revision: 15 June 2012
 " License: MIT
@@ -11,5 +11,5 @@ endif
 runtime! syntax/pegjs-base.vim
 unlet b:current_syntax
 
-syn include @js syntax/javascript.vim
-syn region jsBlock start="{" end="}" keepend contains=@js
+syn include @coffee syntax/coffee.vim
+syn region coffeeBlock start="{" end="}" keepend contains=@coffee
