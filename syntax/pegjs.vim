@@ -19,7 +19,7 @@ syn match initialize "[a-zA-Z$_][a-zA-Z$_0-9]*[\n\t ]*\".*\"[\n\t ]*=" contains=
 syn match initialize "[a-zA-Z$_][a-zA-Z$_0-9]*[\n\t ]*'.*'[\n\t ]*=" contains=ruleDef,equals,innerLiteral
 syn match initialize "[a-zA-Z$_][a-zA-Z$_0-9]*[\n\t ]*=" contains=ruleDef,equals
 syn match exprLabel "[a-zA-Z$_][a-zA-Z$_0-9]*:"he=e-1
-syn region literal start="'" end="'"
+syn region literal start="'" end="'" skip="\(\\\)\@<!\\'"
 syn region literal start="\"" end="\""
 syn region innerLiteral start="'" end="'" contained
 syn region innerLiteral start="\"" end="\"" contained
